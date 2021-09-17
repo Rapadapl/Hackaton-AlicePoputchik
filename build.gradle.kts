@@ -30,7 +30,7 @@ dependencies {
     implementation("com.just-ai.jaicf:core:$jaicf")
     implementation("com.just-ai.jaicf:yandex-alice:$jaicf")
     implementation("com.just-ai.jaicf:mongo:$jaicf")
-
+    implementation("com.just-ai.jaicf:dialogflow:$jaicf")
     implementation("io.ktor:ktor-server-netty:$ktor")
 }
 

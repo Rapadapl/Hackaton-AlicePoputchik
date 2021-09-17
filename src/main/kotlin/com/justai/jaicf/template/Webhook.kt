@@ -7,11 +7,11 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
 fun main() {
-    embeddedServer(Netty, System.getenv("PORT")?.toInt() ?: 8080) {
+    embeddedServer(Netty, System.getenv("PORT")?.toInt() ?: 8888) {
         routing {
             httpBotRouting("/" to AliceChannel(
                 skill,
-                System.getenv("OAUTH_TOKEN") ?: "OR PLACE YOUR OAUTH TOKEN HERE"))
+                System.getenv("OAUTH_TOKEN") ?: "AQAAAAAyWM3GAAT7owuw_tRUhkKjkYpi-DVBoiE"))
         }
     }.start(wait = true)
 }

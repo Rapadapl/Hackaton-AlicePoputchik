@@ -2,23 +2,32 @@ package com.justai.jaicf.template
 
 import com.justai.jaicf.BotEngine
 import com.justai.jaicf.activator.catchall.CatchAllActivator
+import com.justai.jaicf.activator.dialogflow.DialogflowAgentConfig
+import com.justai.jaicf.activator.dialogflow.DialogflowConnector
+import com.justai.jaicf.activator.dialogflow.DialogflowIntentActivator
+import com.justai.jaicf.activator.dialogflow.dialogflow
 import com.justai.jaicf.activator.event.BaseEventActivator
 import com.justai.jaicf.activator.regex.RegexActivator
+import com.justai.jaicf.channel.yandexalice.activator.AliceIntentActivator
 import com.justai.jaicf.context.manager.InMemoryBotContextManager
 import com.justai.jaicf.context.manager.mongo.MongoBotContextManager
 import com.justai.jaicf.template.scenario.MainScenario
 import com.mongodb.client.MongoClients
 
-
-private val contextManager = System.getenv("MONGODB_URI")?.let { url ->
-    val client = MongoClients.create(url)
-    MongoBotContextManager(client.getDatabase("jaicf").getCollection("contexts"))
-} ?: InMemoryBotContextManager
+val dialogflowActivator = DialogflowIntentActivator.Factory(
+    DialogflowConnector(
+        DialogflowAgentConfig(
+            language = "ru",
+            credentialsResourcePath = "/dialogflow_account.json"
+                             )
+                       )
+                                                           )
 
 val skill = BotEngine(
     scenario = MainScenario,
-    defaultContextManager = contextManager,
     activators = arrayOf(
+        AliceIntentActivator,
+        dialogflowActivator,
         RegexActivator,
         BaseEventActivator,
         CatchAllActivator
