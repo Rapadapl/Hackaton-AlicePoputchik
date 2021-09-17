@@ -27,7 +27,7 @@ val skill = BotEngine(
     scenario = MainScenario,
     activators = arrayOf(
         AliceIntentActivator,
-        dialogflowActivator,
+       // dialogflowActivator,
         RegexActivator,
         BaseEventActivator,
         CatchAllActivator

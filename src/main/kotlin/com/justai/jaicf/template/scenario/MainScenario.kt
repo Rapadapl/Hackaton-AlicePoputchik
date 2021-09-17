@@ -14,7 +14,7 @@ val MainScenario = Scenario {
     state("main") {
         activators {
             event(AliceEvent.START)
-            event(DialogflowIntent.WELCOME)
+
         }
         action {
             reactions.say("ХУЙ БЛЯТЬ")
@@ -34,6 +34,20 @@ val MainScenario = Scenario {
             }
         }
     }
+
+    state("alice"){
+        activators {
+            intent("TURN.ON")
+        }
+        action{
+            activator.alice?.run {
+
+                val what = slots["what"]
+                    reactions.say("Ты"+ what.toString())
+            }
+            }
+        }
+
 
     fallback {
         reactions.say("Я ничего не понял")
