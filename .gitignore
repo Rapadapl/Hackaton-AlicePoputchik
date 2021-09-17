@@ -24,3 +24,17 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+
+
+.gradle/
+.idea/.gitignore
+.idea/.name
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/kotlinScripting.xml
+.idea/misc.xml
+.idea/modules/
+.idea/vcs.xml
+build/classes/kotlin/main/META-INF/
+build/kotlin/
