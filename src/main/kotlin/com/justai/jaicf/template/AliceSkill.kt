@@ -18,7 +18,7 @@ val dialogflowActivator = DialogflowIntentActivator.Factory(
     DialogflowConnector(
         DialogflowAgentConfig(
             language = "ru",
-            credentialsResourcePath = "/dialogflow_account.json"
+            credentialsResourcePath = "/df3.json"
                              )
                        )
                                                            )

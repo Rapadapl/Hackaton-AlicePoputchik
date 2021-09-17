@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "newagent-ugdr",
+  "private_key_id": "818d1fb6dc11c11b7da739a42716dc1d7b8a923f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCnra6YSgkGcA6n\nEM1wiQZsRdpUJGaKOnlFLn02QGmYMFv81v+I3QH6kXexwCYA3TawhW4pRwPNLVuk\nwZqaNET2yF3mzIT3d7HnEeaxEtvGNH2qgPefgFCpAeezh32AzggZqJkFCesf70eJ\nLqRo9eqsX3pZHtrlyWx9FbkmT+P7k1YAWFwPoWM+ZZ6YPVjPF5UXMoUR4CAzI4mP\nNnELl9WLjNuY8+6bi+jI3tHOUUIrWU26VwGXxw4BsYHltwylqi7pQmd7AARFjidj\n79AMtD+wXxmMvEBw2wEG0KCZCsJ3qZ/2YYdTjKxS6B+dS9Eww+uapHHMv0ySreTZ\nfoHmE4XdAgMBAAECggEAEC1MtqMP51fYxgv0Mgr6PGhp1avUW7oj+IVxbZI9zcG+\nojBQ43ClD/pIULUPxY4SCGo7FE7mYj1hxc2q330y+RcgHhP1sRVSa89ZkRRXcTIf\nvJsoKLJ9tax6IOMtu8dE10rhhm+sSD6yyVyfXoP5McudV2tHZZtu9MtrezOCdIMc\nsv5zvrd8EzHPedfYz/5n5oyy/3XgupnGOHpfkJuDQJUgOVa+RrjVADiAoE0qRqoW\nwXTJ2bU2eyjH/dd1G4Nr9/qmRrOUeLYqus7hcUWH2rYfg+X9dSidsak6V7eTV2Sm\n55IqvblzGeboVLoc0/p+wnAU6lOq12SqqHHFFF5jkQKBgQDPdA5ptyOU06A0UM9c\nONoVvp8pMCvGJ5aaX609jj105aDmZu/GvhYctSCafUY6mdSidr24Y56K0K2pkD/e\nCsr69UfaTTaI/TdlaGwyst6E1Wm5Pip9j8TSlpz7fwoXPXmLzeeqp5UeOFmBz7vp\nTEBeG9G9IB51z2LaDuj8ZlYvjQKBgQDO6tLpCVto0toeQ+89lnwEK8fr5L8F4Uzo\nncXUzCarQ9UmdiEzo3nWRzQ8m7kMAkO33UWahoUVDqZUjFmeAsZdJOonQSqthwKD\nY1AFmmpb3n33P3ocjkOV2GmoHsYCKv6j3R+mkB+Qo+opfmOEkfRVokHSplljyFgB\nr9/jXc+zkQKBgQCFWbW2EKoHja1KU7OnNUhCeAD5SeSpgGMXom7KxbcNgFnYIMz6\ndM/j7i4iAGr3WlDLigZUE30jABbRi07ynP9zJ93jHoTys8o7Hk+Gm2HcAw7tq19G\nzPaY44XPSA8ldze9PUMweH6rKU+n2O+SfJhXpgxBRPcvhXqmbrUnIWU/NQKBgQCG\n3/xw2J+T+XUiK0gkDhZypZMgia+WhqCaNFWC+zvtgT7MXk4QGexOJ4W+SAdb85Hu\npLY9Hpha/HyhOgckf0yL5IcY5VqLWCjkOfUsYdYYYjQb2W2gdX9KipF8e+q3+QyZ\nBYcfDGz23FHDkFYQUQ9CToy3YaV87Fepadn3m+vKcQKBgQDG96HXHdHtqlktiqLi\nrk9GOPO5PYjU23HrM0k/RuRy5es3kD+KkVtCPv1F+wleghkdwN9gdm2tC8YpyV+J\n78h9IXnt/mEZLR17wHxoc2Pg+dUGp77byIyFGu6sI2f1fiQ4KtvN5PWuZLa5b3Bw\nZihL/PCnuM4zdeHB+QFihdFoeg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "alicehack@newagent-ugdr.iam.gserviceaccount.com",
+  "client_id": "106265231012574475623",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/alicehack%40newagent-ugdr.iam.gserviceaccount.com"
+}

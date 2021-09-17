@@ -1,5 +1,7 @@
 package com.justai.jaicf.template.scenario
 
+import com.justai.jaicf.activator.dialogflow.DialogflowIntent
+import com.justai.jaicf.activator.dialogflow.dialogflow
 import com.justai.jaicf.builder.Scenario
 import com.justai.jaicf.channel.yandexalice.activator.alice
 import com.justai.jaicf.channel.yandexalice.model.AliceEvent
@@ -12,20 +14,8 @@ val MainScenario = Scenario {
     state("main") {
         activators {
             event(AliceEvent.START)
+            event(DialogflowIntent.WELCOME)
         }
-
-//        action {
-//            reactions.run {
-//                say("Управдом слушает. Вы хотите сообщить ваши показания счетчиков?")
-//                buttons("Да", "Нет")
-//                alice?.image(
-//                    "https://i.imgur.com/SUSGpqG.jpg",
-//                    "Управдом слушает",
-//                    "Хотите сообщить ваши показания счетчиков?"
-//                )
-//            }
-//        }
-
         action {
             reactions.say("ХУЙ БЛЯТЬ")
         }
@@ -34,15 +24,13 @@ val MainScenario = Scenario {
 
     state("helmlo"){
         activators {
-            intent("TURN.ON")
+            intent("Hto ya")
         }
 
-        action{
-            activator.alice?.run{
-                val what = slots["what"]
-                val where = slots["where"]
-                reactions.say(what.toString() + " " + where.toString())
-                reactions.alice?.endSession()
+        action(dialogflow){
+                val what = activator.slots["HtoYa"]
+            if (what != null) {
+                reactions.say("Ты"+ String(what.toByteArray(), charset("UTF-8")))
             }
         }
     }
