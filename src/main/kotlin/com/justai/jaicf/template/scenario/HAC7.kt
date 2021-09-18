@@ -1,36 +1,30 @@
 package com.justai.jaicf.template.scenario
 
-import com.justai.jaicf.activator.event.event
 import com.justai.jaicf.builder.Scenario
 import com.justai.jaicf.channel.yandexalice.activator.alice
 import com.justai.jaicf.channel.yandexalice.model.AliceEvent
 import com.justai.jaicf.channel.yandexalice.alice
-
-val HAC7 = Scenario {
-
-    state("main") {
+val HAC12 = Scenario {
+    state("info") {
         activators {
-            event(AliceEvent.START)
+            intent("INFO")
         }
         action {
-            reactions.say("!")
+            activator.alice?.run {//нужно, если есть активатор
+                val slotName = slots["info"]
+//если сказанные слова не соответствуют ни одному из навыков
+                reactions.go("getinfo")
+            }
         }
-    }
-
-    state("weather") {
-        activators {
-            intent("WEATHER")
-        }
-        action {
-            activator.alice?.run {
-                val where = slots["where"]
-                reactions.say("Определяю погоду в $where")
+        state("getinfo") {
+            action {
+                reactions.say("поезд номер такой-то,маршрут такой-то, остановка такая-то, осталось столько-то времени")
                 reactions.alice?.endSession()
             }
         }
-    }
 
-    fallback {
-        reactions.say("Не понял(-а)")
+        fallback {
+            reactions.sayRandom("чего бля“,”мне немного не понятна просьба. Смотрите что я умею:”дай информацию”, “заказать еду из вагона ресторана”")
+        }
     }
 }
