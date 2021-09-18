@@ -4,7 +4,7 @@ import com.justai.jaicf.builder.Scenario
 import com.justai.jaicf.channel.yandexalice.activator.alice
 import com.justai.jaicf.channel.yandexalice.model.AliceEvent
 import com.justai.jaicf.channel.yandexalice.alice
-val HAC12 = Scenario {
+val HAC7 = Scenario {
     state("info") {
         activators {
             intent("INFO")
