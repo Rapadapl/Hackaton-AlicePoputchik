@@ -7,6 +7,8 @@ import com.justai.jaicf.activator.dialogflow.DialogflowConnector
 import com.justai.jaicf.activator.dialogflow.DialogflowIntentActivator
 import com.justai.jaicf.activator.dialogflow.dialogflow
 import com.justai.jaicf.activator.event.BaseEventActivator
+import com.justai.jaicf.activator.rasa.RasaIntentActivator
+import com.justai.jaicf.activator.rasa.api.RasaApi
 import com.justai.jaicf.activator.regex.RegexActivator
 import com.justai.jaicf.channel.yandexalice.activator.AliceIntentActivator
 import com.justai.jaicf.context.manager.InMemoryBotContextManager
@@ -27,6 +29,7 @@ val skill = BotEngine(
     scenario = MainScenario,
     activators = arrayOf(
         AliceIntentActivator,
+        RasaIntentActivator.Factory(RasaApi("https://alice-rasa.herokuapp.com")),
        // dialogflowActivator,
         RegexActivator,
         BaseEventActivator,
