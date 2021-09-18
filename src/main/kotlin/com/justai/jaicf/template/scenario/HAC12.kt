@@ -8,6 +8,7 @@ import org.apache.http.client.methods.HttpGet
 import org.apache.http.impl.client.HttpClients
 import org.apache.http.util.EntityUtils
 import java.lang.Exception
+import kotlin.math.roundToInt
 
 
 val WeatherScenario = Scenario {
@@ -31,14 +32,13 @@ val WeatherScenario = Scenario {
                 map = Gson().fromJson(result, map.javaClass)
                 val aaa = map["main"]
                 val temp: Map<String, Any> = aaa as Map<String, Any>
-                reactions.say("Температура в городе " + c.capitalize() + " " + temp["temp"] + " градусов цельсия, ощущается как " + temp["feels_like"] + " градусов. Давление составляет " + temp["pressure"] + " ГПа." )
+                reactions.say("Температура в городе " + c.capitalize() + " " + temp["temp"].toString().toDouble().roundToInt() + " градусов цельсия, ощущается как " + temp["feels_like"].toString().toDouble().roundToInt() + " градусов. Давление составляет " + temp["pressure"] + " ГПа." )
             }catch (e: Exception){
                 reactions.say("Я не знаю такого города")
             }
 
         }
     }
-
 
     state("weatherHelp"){
         activators {
