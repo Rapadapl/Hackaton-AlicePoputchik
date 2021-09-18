@@ -10,7 +10,8 @@
 ### Включенные навыки
 
 1. Раздел "Погода"
-[image](https://user-images.githubusercontent.com/50312314/133880024-9de01890-8dcb-413c-b0e4-642a4ba1b580.png)
+
+![image](https://user-images.githubusercontent.com/50312314/133880024-9de01890-8dcb-413c-b0e4-642a4ba1b580.png)
 
 2. Раздел "Покупка билетов"
 [image](https://user-images.githubusercontent.com/50312314/133879629-53bbe0cc-1472-44a5-be23-132284e1f8c1.png)
