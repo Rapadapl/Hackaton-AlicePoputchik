@@ -1,75 +1,35 @@
-# Шаблонный проект навыка Алисы на JAICF
+# Проект с навыками Алисы для "Попутчика" от РЖД
 
-Это готовый к использованию шаблон проекта навыка голосового ассистента Яндекс Алиса.
-Написан с использованием [фреймворка JAICF](https://github.com/just-ai/jaicf-kotlin/tree/master/channels/yandex-alice) на языке [Kotlin](https://kotlinlang.org).
+Этот проект - голосовой помощник для Алисы, который служит дополнением к приложению РЖД "Попутчик"
 
-## Как использовать
+## Возможности использования
 
-Вы можете развернуть этот навык в облаке Heroku в один клик, а затем продолжить разработку и отладку на своем ПК.
+Проект развернут на базе функций в Yandex.Cloud и позволяет вызвать и использовать включенные в него навыки голосового помощника
 
-### Развертывание на Heroku
 
-1. <a href="https://oauth.yandex.ru/authorize?response_type=token&client_id=c473ca268cd749d3a8371351a8f2bcbd" target="_blank">
-    Скопируйте ваш OAuth токен
-</a>
+### Включенные навыки
 
-2. Нажмите на кнопку ниже
+1. Раздел "Погода"
 
-<a href="https://heroku.com/deploy" target="_blank">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a><br/><br/>
+![image](https://user-images.githubusercontent.com/50312314/133880024-9de01890-8dcb-413c-b0e4-642a4ba1b580.png)
 
-Вебхук будет автоматически развернут в облаке Heroku, и вы получите рабочий сервер, который далее сможете обновлять (см ниже).
+2. Раздел "Покупка билетов"
 
-**При установке укажите ваш OAuth токен.**
+![image](https://user-images.githubusercontent.com/50312314/133879629-53bbe0cc-1472-44a5-be23-132284e1f8c1.png)
 
-### Тестирование
+3. Раздел "Доступные аудиокниги"
 
-1. После развертывания вебхука нажмите на кнопку **View** и скопируйте URL. Это и есть ваш вебхук.
-2. Создайте новый навык для Алисы в [Яндекс Диалогах](https://dialogs.yandex.ru/developer).
-3. Укажите название навыка и URL вебхука, который вы скопировали (_остальные поля необязательны_).
-4. Перейдите на вкладку _Тестирование_ - навык будет запущен автоматически.
+![image (2)](https://user-images.githubusercontent.com/50312314/133879674-f64a076e-1f30-439c-a378-264d10faea37.png)
 
-### Локальная разработка и обновление сервера
+4. Раздел "Новости"
 
-#### Создание проекта
+![image (1)](https://user-images.githubusercontent.com/50312314/133879649-205bbe3a-8b59-4771-b66b-cad1100ed08e.png)
 
-1. Установите [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line).
-2. Выполните следующие команды в терминале
+5. Раздел "Магазин на борту"
 
-```
-heroku login
-heroku git:clone -a <название вашего приложения на Heroku>
-cd <название вашего приложения на Heroku>
-git remote add origin https://github.com/just-ai/alice-jaicf-template
-git pull origin master
-```
+![image (3)](https://user-images.githubusercontent.com/50312314/133879691-4e899c40-71a6-434b-b15f-de0f1f27f5c9.png)
 
-3. Создайте новый проект в [IntelliJ IDEA](https://www.jetbrains.com/ru-ru/idea/download/) из исходных кодов (Project from Existing Sources), выберите Gradle из списка.
+6. Раздел "Информация о текущей поездке"
 
-#### Разработка
+![image (4)](https://user-images.githubusercontent.com/50312314/133879719-b52d1a24-b95e-4603-b972-d47ef1e3f0e7.png)
 
-Чтобы запустить вебхук локально, запустите `Webhook.kt`.
-Сервер запускается на порту `8080`.
-
-Чтобы разрабатывать навык, вам нужно получить публичный URL, который затем прописать в настройках вашего навыка в Яндекс Диалогах.
-Для этого можно установить [ngrok](https://ngrok.com), а затем выполнить команду `ngrok http 8080` в терминале.
-Таким образом все запросы от Алисы будут приходить на ваш локальный ПК, и вы сможете отлаживать сценарий навыка.
-
-> Изучите [документацию JAICF](https://github.com/just-ai/jaicf-kotlin/tree/master/channels/yandex-alice), чтобы понимать, как разрабатывать навык для Алисы
-
-#### Обновление сервера
-
-Как только вы готовы обновить сервер, выполните следующие команды в терминале:
-
-```
-git add .
-git commit -am "описание ваших изменений"
-git push
-```
-
-Heroku автоматически соберет и обновит ваш сервер.
-
-# Обратная связь
-
-Если у вас возникли вопросы или проблемы, вы можете задать их в [Slack сообществе фреймворка JAICF](https://join.slack.com/t/jaicf/shared_invite/zt-clzasfyq-f4gv8hf3JHD4RmpMtrt0Aw) или [создать задачу](https://github.com/just-ai/alice-jaicf-template/issues) в этом репозитории.
